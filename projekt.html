@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpG7bddoort" content="width=device-width, initial-scale=1.0">
+    <title>Pregled za 4. razred</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Škola Portal</a>
+            <div class="navbar-nav">
+                <a class="nav-link active" href="#" onclick="showSection('lektire')">Lektire</a>
+                <a class="nav-link" href="#" onclick="showSection('predmeti')">Tehničar za računalstvo</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div id="lektire">
+            <h2>Popis lektira za 4. razred srednje škole</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Pedro de la Barca: Život je san</li>
+                <li class="list-group-item">Johann Goethe: Patnje malog Werthera</li>
+                <li class="list-group-item">Miroslav Krleža: Šjor Glembaj</li>
+                <li class="list-group-item">Ranko Marinović: Kiklop</li>
+                <li class="list-group-item">Vjenceslav Novak: Posljednji Stipančići</li>
+                <li class="list-group-item">Petrarca: Izbor iz poezije</li>
+            </ul>
+        </div>
+
+        <div id="predmeti" style="display:none;">
+            <h2>Predmeti: Tehničar za računalstvo (4. razred)</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Programiranje</li>
+                <li class="list-group-item">Baze podataka</li>
+                <li class="list-group-item">Računalne mreže</li>
+                <li class="list-group-item">Web programiranje</li>
+                <li class="list-group-item">Operacijski sustavi</li>
+                <li class="list-group-item">Politikaaaaaa xdxdxdxd</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.getElementById('lektire').style.display = sectionId === 'lektire' ? 'block' : 'none';
+            document.getElementById('predmeti').style.display = sectionId === 'predmeti' ? 'block' : 'none';
+            
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
